@@ -23,7 +23,7 @@ class AddTasksScreen extends StatelessWidget {
           TextField(autofocus: true, textAlign: TextAlign.center),
           ElevatedButton(
             onPressed: null,
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.amber[400],),// there is primary proprioté fortext button pour font color
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.amber[400],),// there is primary proprioté for textbutton pour font color
             child: Text("Add"),
           ),
         ],
