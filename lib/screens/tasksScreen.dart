@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:todaydo/models/task.dart';
 import 'package:todaydo/screens/add_tasks.dart';
 import 'package:todaydo/widget/TaskList.dart';
 
-class Tasksscreen extends StatelessWidget {
+class Tasksscreen extends StatefulWidget {
   const Tasksscreen({super.key});
+
+  @override
+  State<Tasksscreen> createState() => _TasksscreenState();
+}
+
+class _TasksscreenState extends State<Tasksscreen> {
+  List<Task> Tasks = [Task(name: "1.2.3"), Task(name: "4.5.6")];
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +63,7 @@ class Tasksscreen extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
-                child: task_list(),
+                child: task_list(Tasks),
               ),
             ),
           ],
